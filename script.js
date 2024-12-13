@@ -38,7 +38,7 @@ function toggleSign() {
 }
 
 function addToHistory(expression, result) {
-    const historyEntry = `${expression} = ${result}`;
+    const historyEntry = `${expression} = ${formatNumberWithCommas(result.toString())}`;
     history.push(historyEntry);
     localStorage.setItem("history", JSON.stringify(history));
     updateHistory();
